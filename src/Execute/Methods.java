@@ -4,6 +4,10 @@ public class Methods {
 
     int[] array_of_notes = new int[]{10, 14, 23, 25, 38, 41, 43, 47, 56, 59, 63, 66, 68, 74, 78, 86, 89, 90, 92, 95, 98};
 
+    //in: int[]; out: int[]
+    //Rounds up each element (i) in a give array
+    //if the difference between i and the next multiple
+    //of 5 <= 2
     public int[] round_up(int[] array_of_notes) {
         int[] array_of_notes1 = array_of_notes.clone();
         for (int i = 0; i < array_of_notes1.length; i++) {
