@@ -20,9 +20,9 @@ public class Methods {
     public int[] not_sufficient(int[] array_of_notes) {
         int[] not_sufficient_notes = new int[array_of_notes.length];
         int j = 0;
-        for (int i = 0; i < array_of_notes.length; i++) {
-            if (array_of_notes[i] < 40) {
-                not_sufficient_notes[j] = array_of_notes[i];
+        for (int array_of_note : array_of_notes) {
+            if (array_of_note < 40) {
+                not_sufficient_notes[j] = array_of_note;
                 j++;
             }
         }
@@ -33,8 +33,8 @@ public class Methods {
     //Computes average of notes
     public int average(int[] array_of_notes){
         int avg=0;
-        for (int i = 0; i < array_of_notes.length; i++){
-            avg += array_of_notes[i];
+        for (int array_of_note : array_of_notes) {
+            avg += array_of_note;
         }
         avg /= array_of_notes.length;
         return avg;
