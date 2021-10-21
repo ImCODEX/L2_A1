@@ -57,22 +57,16 @@ public class Methods {
     }
 
     /**
-     * Determines the maximum note that will be rounded up
+     * Determines the maximum rounded up grade
      * @param array_of_grades: array of grades
-     * @return: max note
+     * @return: max grade
      */
     public int max_rounded_up(int[] array_of_grades) {
         int max = 0;
-        for (int i = 0; i < array_of_grades.length; i++) {
-            if ((array_of_grades[i] + 1) % 5 == 0 && array_of_grades[i] > max) {
-                array_of_grades[i] = array_of_grades[i] + 1;
-                max = array_of_grades[i];
-            }
-            else if ((array_of_grades[i] + 2) % 5 == 0 && array_of_grades[i] > max) {
-                array_of_grades[i] = array_of_grades[i] + 2;
-                max = array_of_grades[i];
-            }
-        }
+        for (int array_of_grade : array_of_grades)
+            if (array_of_grade % 5 >= 3 && array_of_grade > max)
+                max = array_of_grade + (5 - array_of_grade % 5);
+
         return max;
     }
 
