@@ -2,7 +2,6 @@ package Execute;
 
 public class Methods {
 
-    int[] array_of_grades = new int[]{10, 14, 23, 25, 38, 41, 43, 47, 56, 59, 63, 66, 68, 74, 78, 86, 89, 90, 92, 95, 98};
 
     /**
      * Rounds up each element (i) in a give array
